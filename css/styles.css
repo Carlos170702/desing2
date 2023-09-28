@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  /* COLORS */
+  --Light_red: hsl(0, 100%, 67%);
+  --Orangey_yellow: hsl(39, 100%, 56%);
+  --Green_teal: hsl(166, 100%, 37%);
+  --Cobalt_blue: hsl(234, 85%, 45%);
+  /* GRADIENTS */
+  --Light_slateblue: hsl(252, 100%, 67%);
+  --Light_royal_blue: hsl(241, 81%, 54%);
+  --Violet_blue: rgb(87, 40, 217);
+  --Persian_blue: hsl(241, 62%, 49%);
+  /* NEUTRAL */
+  --White: hsl(0, 0%, 100%);
+  --Pale_blue: hsl(221, 100%, 96%);
+  --Light_lavender: hsl(241, 100%, 89%);
+  --Dark_gray_blue: #2421ca;
+  /* TYPOGRAPHY */
+  --Font_size: 18px;
+  --Font_family: "Hanken Grotesk", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--Font_family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: min(90%, 600px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px 0px var(--Pale_blue);
+}
+
+.score {
+  background: linear-gradient(
+    0deg,
+    var(--Persian_blue) 0%,
+    var(--Violet_blue) 100%
+  );
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.2rem;
+  gap: 20px;
+  color: var(--White);
+}
+
+.text_result {
+  font-size: var(--Font_size);
+  color: var(--Light_lavender);
+  background-color: transparent;
+}
+
+.score h2 {
+  font-size: 3rem;
+}
+
+.score p {
+  color: var(--Light_lavender);
+  text-align: center;
+  font-weight: 500;
+}
+
+.circule {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  background: linear-gradient(
+    0deg,
+    var(--Persian_blue) 0%,
+    var(--Violet_blue) 100%
+  );
+}
+
+.circule p {
+  font-size: 14px;
+}
+
+.great {
+  font-size: 25px;
+  color: var(--White);
+}
+
+/* styles information */
+.informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.2rem;
+  gap: 1rem;
+}
+
+.informations h2 {
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.abilitys {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.ability {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.informations .abilitys .ability:nth-child(1) {
+  background-color: rgba(255, 0, 0, 0.123);
+}
+
+.informations .abilitys .ability:nth-child(1) > p {
+  color: var(--Light_red);
+}
+
+.informations .abilitys .ability:nth-child(2) {
+  background-color: rgba(195, 255, 0, 0.123);
+}
+
+.informations .abilitys .ability:nth-child(2) > p {
+  color: var(--Orangey_yellow);
+}
+
+.informations .abilitys .ability:nth-child(3) {
+  background-color: rgb(17, 255, 0, 0.123);
+}
+
+.informations .abilitys .ability:nth-child(3) > p {
+  color: var(--Green_teal);
+}
+
+.informations .abilitys .ability:nth-child(4) {
+  background-color: rgb(55, 0, 255, 0.123);
+}
+
+.informations .abilitys .ability:nth-child(4) > p {
+  color: var(--Cobalt_blue);
+}
+
+.ability > p {
+  margin-left: 0.5rem;
+  flex: 1;
+  font-weight: 700;
+}
+
+.percentage {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.percentage p:last-child {
+  color: rgb(135, 135, 135);
+}
+
+.btn {
+  border: none;
+  padding: 0.8rem 0px;
+  width: 100%;
+  color: var(--White);
+  border-radius: 1.5rem;
+}
+
+.btn_next {
+  background-color: hsl(193.85deg 33.49% 17.45%);
+}
+
+.btn_next:hover {
+  background: linear-gradient(
+    0deg,
+    var(--Persian_blue) 0%,
+    var(--Violet_blue) 100%
+  );
+}
+
+
+@media (max-width: 375px) {
+    .container{
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+
+    .score,.container{
+      border-radius: 0px 0px 20px 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container{
+      width: 400px;
+      grid-template-columns: 1fr;
+    }
+  
+    .score,.container{
+      border-radius: 0px 0px 20px 20px;
+    }
+    
+}
